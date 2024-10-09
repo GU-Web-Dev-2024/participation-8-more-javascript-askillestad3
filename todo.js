@@ -17,3 +17,4 @@ function clearInput(inputField) {
 
 
 // exporting functions
+export { addTask, clearInput };
