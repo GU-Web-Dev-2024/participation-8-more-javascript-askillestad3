@@ -9,7 +9,9 @@ function addTask(task, taskList) {
 }
 
 // function to clear input field
-
+function clearInput(inputField) {
+    inputField.value = "";
+}
 
 // alternate method to export
 
