@@ -14,7 +14,9 @@ function clearInput(inputField) {
 }
 
 // alternate method to export
-
+export function sayHello() {
+    alert("Hello, World!");
+}
 
 // exporting functions
 export { addTask, clearInput };
