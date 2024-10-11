@@ -2,7 +2,7 @@
 
 // function to save task to local storage
 function saveTasks(tasks) {
-    localStorage.set("tasks", JSON.stringify(tasks));
+    localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
 // function to load tasks from local storage

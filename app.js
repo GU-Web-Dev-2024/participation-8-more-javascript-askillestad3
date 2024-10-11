@@ -2,7 +2,7 @@
 
 // import modules
 import { loadTasks, saveTasks } from "./storage.js";
-import { clearInput } from "./todo.js";
+import { addTask, clearInput } from "./todo.js";
 
 // alternate import
 //import * as storage from "./storage.js";
@@ -15,10 +15,18 @@ const addTaskButton = document.getElementById("add-task");
 // load tasks from local storage
 const tasks = loadTasks();
 
+tasks.forEach(task => {
+    addTask(task, taskList);
+});
+
 // add event listener for new task
 addTaskButton.addEventListener("click", ()=>{
     const task = newTaskInput.value.trim();
-    tasks.push(task);
-    saveTasks(tasks);
-    clearInput(newTaskInput);
+
+    if (task) {
+        addTask(task, taskList);
+        tasks.push(task);
+        saveTasks(tasks);
+        clearInput(newTaskInput);
+    }
 });
